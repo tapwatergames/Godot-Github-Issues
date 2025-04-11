@@ -16,7 +16,7 @@ func on_issue_list_set(issue_list : Array[Issue]) -> void:
   for issue : Issue in issue_list:
     if not instanced_issues.has(issue.title):
       var my_issue = ISSUE_SCENE.instantiate()
-      my_issue.set_issue_data(issue.title, issue.user.login, issue.body)
+      my_issue.set_issue_data(issue)
       vbox.add_child(my_issue)
       instanced_issues[issue.title] = my_issue
     

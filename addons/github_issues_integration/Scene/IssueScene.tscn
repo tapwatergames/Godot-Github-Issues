@@ -22,7 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-size_flags_vertical = 2
+size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_5cqub")
 script = ExtResource("1_xm4l3")
 
@@ -47,12 +47,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Title"
 
-[node name="Author" type="Label" parent="MarginContainer/VBoxContainer/TitleBar"]
+[node name="Assignee" type="RichTextLabel" parent="MarginContainer/VBoxContainer/TitleBar"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Author"
+bbcode_enabled = true
 
 [node name="Description" type="Label" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true

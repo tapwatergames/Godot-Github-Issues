@@ -11,12 +11,16 @@ config_version=5
 [application]
 
 config/name="GithubIssuesRest"
-config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="GithubIssuesRest"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/github_issues_integration/plugin.cfg")
 
 [rendering]
 
