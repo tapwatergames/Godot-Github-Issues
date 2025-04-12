@@ -2,22 +2,22 @@
 class_name Issue
 extends RefCounted
 
-var id : int
-var node_id : String
-var url : String
-var repository_url : String
-var labels_url : String
-var comments_url : String
-var events_url : String
-var html_url : String
-var number : int
-var state : String
-var title : String
-var body : String
-var user : User
-var labels : Array[GithubLabel]
-var assignee : User
-var assignees : Array[User]
+@export var id : int
+@export var node_id : String
+@export var url : String
+@export var repository_url : String
+@export var labels_url : String
+@export var comments_url : String
+@export var events_url : String
+@export var html_url : String
+@export var number : int
+@export var state : String
+@export var title : String
+@export var body : String
+@export_storage var user : User
+@export_storage var labels : Array[GithubLabel]
+@export_storage var assignee : User
+@export_storage var assignees : Array[User]
 
 func is_open(open : bool) -> void:
   if open:

@@ -2,10 +2,10 @@
 class_name GithubLabel
 extends RefCounted
 
-var id : int
-var node_id : String
-var url : String
-var name : String
-var description : String
-var color : String
-var default : bool
+@export var id : int
+@export var node_id : String
+@export var url : String
+@export var name : String
+@export var description : String
+@export var color : String
+@export var default : bool

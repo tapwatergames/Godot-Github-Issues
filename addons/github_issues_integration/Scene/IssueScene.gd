@@ -23,6 +23,8 @@ func set_issue_data(issue : Issue) -> void:
     
 func handle_closed_pressed() -> void:
   issue.is_open(false)
+  var patch_api : IssuePatchAPI = IssuePatchAPI.new(self)
+  patch_api.request_patch("Evelyn-Hill", "gofetch", issue)
   # Do JSON serlialization and post
   # Tell thing to refresh issues.
   pass

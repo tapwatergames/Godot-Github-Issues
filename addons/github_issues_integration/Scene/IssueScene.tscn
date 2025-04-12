@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://b3ll5ldggwnan" path="res://addons/github_issues_integration/Scene/IssueScene.gd" id="1_xm4l3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5cqub"]
-bg_color = Color(0.215686, 0.215686, 0.215686, 0.545098)
+bg_color = Color(0.129458, 0.148989, 0.180255, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.27299, 0.565245, 0.8417, 1)
+border_color = Color(0.356619, 0.580346, 0.776745, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
