@@ -19,7 +19,7 @@ func _enter_tree() -> void:
   dock = dock.instantiate()
   add_control_to_dock(EditorPlugin.DOCK_SLOT_RIGHT_BL, dock)
   
-  # This gets the issues, and subsequently sets the Issue list.
+
   var issue_get_api := IssuesGetAPI.new("Evelyn-Hill", "gofetch")
   # You basically have to use signals here because the HTTPRequest class is
   # not awaitable. There is an addon that has an awaitable, but this works fine.
@@ -27,7 +27,6 @@ func _enter_tree() -> void:
     set_issue_list(issue_get_api.get_issues())
   )
     
-#TODO: Dynamically construct return array
 #TODO: Send issue data to UI to be displayed
 #TODO: Allow issues to be closed or edited via UI? (Maybe)
     
