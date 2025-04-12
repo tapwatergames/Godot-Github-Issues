@@ -3,9 +3,10 @@ This plugin adds a new dock to your godot editor that allows you
 to view (and soon edit) github issues right inside of the godot editor.
 
 ## Current Limitations
-Currently only works on public repositories.
-Cannot edit or close issues from editor.
-Must add your respository details directly in the source code.
+- Currently only works on public repositories.
+- Cannot edit or close issues from editor.
+- Must add your respository details directly in the source code.
+- Cannot properly filter issues
 
 ## Screenshot
 ![image](https://github.com/user-attachments/assets/aeab6c2c-32a5-4574-96dc-668acb593203)
