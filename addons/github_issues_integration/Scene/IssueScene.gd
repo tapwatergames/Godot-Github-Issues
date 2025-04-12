@@ -4,7 +4,6 @@ extends PanelContainer
 
 var issue : Issue
 
-
 func _ready() -> void:
   %CloseButton.pressed.connect(handle_closed_pressed)
 
