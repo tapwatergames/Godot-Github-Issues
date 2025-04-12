@@ -43,18 +43,34 @@ size_flags_vertical = 3
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer/TitleBar"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 18
 text = "Title"
 
-[node name="Assignee" type="RichTextLabel" parent="MarginContainer/VBoxContainer/TitleBar"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TitleBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer/TitleBar/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
-bbcode_enabled = true
+text = "Close"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TitleBar"]
+layout_mode = 2
+
+[node name="Owner" type="Label" parent="MarginContainer/VBoxContainer/TitleBar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Image" type="TextureRect" parent="MarginContainer/VBoxContainer/TitleBar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
 
 [node name="Description" type="Label" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
+theme_override_font_sizes/font_size = 14
 text = "This is a long description of an issue"
 autowrap_mode = 2

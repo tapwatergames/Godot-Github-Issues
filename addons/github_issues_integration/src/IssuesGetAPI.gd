@@ -43,26 +43,16 @@ func split_response_into_array(response : Variant) -> Array[String]:
   var max_count = 21
   var curent_count = 0
   
-  
-  
   # The string we are attempting to match.
   var target_string : String  = ",{\"url\""
   var target_string_size : int = 7
-  
-  #print(response.substr(4093, 8196))
-  
+
   # Known character sequence for split is },{"url" 
   # split point is directly after the comma, comma should be deleted.
-  
-  # Find a } construct a string of the next 7 characters
-  # if those characters match the target string
-  # create a break point index
 
-  
   var index : int = 0
   for char in response:
     index += 1
-    
     if char == "}":
       var possible_string : String = response.substr(index, target_string_size)
       if possible_string == target_string:
@@ -70,7 +60,7 @@ func split_response_into_array(response : Variant) -> Array[String]:
 
       
   var to_return : Array[String]
-  # This *should* dynamically construct the array. I need to test it tho..
+
   for idx in indicies_for_split:
     if indicies_for_split.find(idx) == 0:
       to_return.append(response.substr(0, idx).lstrip("[],").rstrip("[],"))
@@ -83,10 +73,6 @@ func split_response_into_array(response : Variant) -> Array[String]:
         idx_diff).lstrip("[],").rstrip("[],"))
   
   to_return.append(response.substr(indicies_for_split[indicies_for_split.size() - 1], -1).lstrip("[],").rstrip("[],"))
-
-
-  for item in to_return:
-    print(item, "\n", "\n")
     
   return to_return
   

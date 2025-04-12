@@ -18,17 +18,18 @@ func _enter_tree() -> void:
   dock = preload("res://addons/github_issues_integration/Scene/dock.tscn")
   dock = dock.instantiate()
   add_control_to_dock(EditorPlugin.DOCK_SLOT_RIGHT_BL, dock)
-  
+  fetch_issues()
+    
+#TODO: Send issue data to UI to be displayed
+#TODO: Allow issues to be closed or edited via UI? (Maybe)
 
+func fetch_issues() -> void:
   var issue_get_api := IssuesGetAPI.new("Evelyn-Hill", "gofetch")
   # You basically have to use signals here because the HTTPRequest class is
   # not awaitable. There is an addon that has an awaitable, but this works fine.
   issue_get_api.request_finished.connect(func(): 
     set_issue_list(issue_get_api.get_issues())
   )
-    
-#TODO: Send issue data to UI to be displayed
-#TODO: Allow issues to be closed or edited via UI? (Maybe)
     
 func set_issue_list(issue : Array[Issue]) -> void:
   issue_list = issue

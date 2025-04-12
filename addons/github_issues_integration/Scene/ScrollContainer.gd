@@ -12,11 +12,14 @@ func _ready() -> void:
   GithubIssues.instance.issue_list_set.connect(on_issue_list_set)
 
 func on_issue_list_set(issue_list : Array[Issue]) -> void:
-  # Change this to ID soon
+  # This handles all of the creation and updating of issue data.
   for issue : Issue in issue_list:
-    if not instanced_issues.has(issue.title):
+    if not instanced_issues.has(issue.id):
       var my_issue = ISSUE_SCENE.instantiate()
-      my_issue.set_issue_data(issue)
       vbox.add_child(my_issue)
-      instanced_issues[issue.title] = my_issue
+      my_issue.set_issue_data(issue)
+      instanced_issues[issue.id] = my_issue
+    else:
+      var my_issue : IssueScene = instanced_issues[issue.id]
+      my_issue.set_issue_data(issue)
     
